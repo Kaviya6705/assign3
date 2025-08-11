@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String rollno = sc.nextLine();
+        int luckycount = 0;
+        for(int i = 0 ; i < rollno.length() ; i++){
+            char ch = rollno.charAt(i);
+            if(ch=='4' || ch=='7'){
+                luckycount++;
+            }
+        }
+        String countStr = Integer.toString(luckycount);
+        boolean isLucky = true;
+        for (int i = 0; i < countStr.length(); i++) {
+            char ch = countStr.charAt(i);
+            if (ch != '4' && ch != '7') {
+                isLucky = true;
+                break;
+            }
+        }
+        if (isLucky) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+    }
+}
+    

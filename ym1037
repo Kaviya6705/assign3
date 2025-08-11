@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); 
+        int k = sc.nextInt(); 
+        int maxScore = n * 2;
+        int replays;
+        if (k <= maxScore) 
+        {
+             replays = maxScore - k;
+            
+        } else 
+        {
+            replays = k - maxScore;
+        }
+        System.out.println("The minimum count of n levels is 1");
+    }
+}
